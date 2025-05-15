@@ -1,6 +1,5 @@
 import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../contexts/AuthContext';
+import { AuthContext } from '../contexts/AuthContext';  // Changed from default import
 
 export const useAuth = () => {
   const context = useContext(AuthContext);

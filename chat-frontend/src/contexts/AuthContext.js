@@ -7,8 +7,10 @@ import {
   logoutUser 
 } from '../services/auth';
 
-const AuthContext = createContext();
+// Create and export the context separately
+export const AuthContext = createContext();
 
+// Main provider component
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem('token'));
@@ -123,4 +125,5 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
+// Export the context as default for easier consumption
 export default AuthContext;
